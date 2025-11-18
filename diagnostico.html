@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>✅ Diagnóstico - Mix Mateus (VERSÃO CORRIGIDA)</title>
+    <title>✅ Diagnóstico - Mix Mateus (SUBPASTA)</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -83,11 +83,11 @@
 </head>
 <body>
     <div class="success-banner">
-        🎉 VERSÃO CORRIGIDA - Logo com Nome Fixo! 🎉
+        🎉 VERSÃO PARA SUBPASTA - Caminhos Relativos! 🎉
     </div>
 
-    <h1>🔍 Diagnóstico Completo - Mix Mateus</h1>
-    <p style="text-align: center; font-size: 16px;">Esta página verifica se todos os arquivos estão carregando corretamente.</p>
+    <h1>🔍 Diagnóstico Completo - Mix Mateus (Subpasta)</h1>
+    <p style="text-align: center; font-size: 16px;">Esta versão funciona em <code>public_html/1/</code> ou qualquer outra subpasta!</p>
     
     <div class="test" id="test-html">
         <h2>✅ Teste 1: HTML Principal</h2>
@@ -95,55 +95,56 @@
     </div>
     
     <div class="test" id="test-logo">
-        <h2>Teste 2: Logo Mix Mateus (NOME FIXO)</h2>
-        <p><strong>NOVIDADE:</strong> A logo agora tem um nome fixo sem hash!</p>
-        <p>Caminho: <code>/logo-mix-mateus.png</code></p>
-        <img src="logo-mix-mateus.png" alt="Logo Mix Mateus" onerror="this.parentElement.classList.add('error'); this.style.display='none'; document.getElementById('logo-error').style.display='block';" onload="this.parentElement.classList.add('success'); document.getElementById('logo-success').style.display='block';">
+        <h2>Teste 2: Logo Mix Mateus (CAMINHO RELATIVO)</h2>
+        <p><strong>NOVIDADE:</strong> Usando caminhos relativos (funciona em subpastas)!</p>
+        <p>Caminho: <code>./logo-mix-mateus.png</code></p>
+        <img src="./logo-mix-mateus.png" alt="Logo Mix Mateus" onerror="this.parentElement.classList.add('error'); this.style.display='none'; document.getElementById('logo-error').style.display='block';" onload="this.parentElement.classList.add('success'); document.getElementById('logo-success').style.display='block';">
         <p id="logo-success" style="display:none; color:#4CAF50; font-weight:bold; font-size: 18px;">✅ LOGO CARREGADA COM SUCESSO!</p>
-        <p id="logo-error" style="display:none; color:#f44336; font-weight:bold; font-size: 18px;">❌ ERRO: Logo não encontrada! Certifique-se de enviar o arquivo logo-mix-mateus.png na raiz.</p>
+        <p id="logo-error" style="display:none; color:#f44336; font-weight:bold; font-size: 18px;">❌ ERRO: Logo não encontrada! Certifique-se de enviar logo-mix-mateus.png na mesma pasta.</p>
     </div>
     
     <div class="test" id="test-hero">
         <h2>Teste 3: Imagem do Casal</h2>
-        <p>Caminho: <code>assets/Happy_couple_Mix_Mateus_card_approval_770ee240-CNrgi5Vf.png</code></p>
-        <img src="assets/Happy_couple_Mix_Mateus_card_approval_770ee240-CNrgi5Vf.png" alt="Casal Feliz" onerror="this.parentElement.classList.add('error'); this.style.display='none'; document.getElementById('hero-error').style.display='block';" onload="this.parentElement.classList.add('success'); document.getElementById('hero-success').style.display='block';">
+        <p>Caminho: <code>./assets/Happy_couple_Mix_Mateus_card_approval_770ee240-CNrgi5Vf.png</code></p>
+        <img src="./assets/Happy_couple_Mix_Mateus_card_approval_770ee240-CNrgi5Vf.png" alt="Casal Feliz" onerror="this.parentElement.classList.add('error'); this.style.display='none'; document.getElementById('hero-error').style.display='block';" onload="this.parentElement.classList.add('success'); document.getElementById('hero-success').style.display='block';">
         <p id="hero-success" style="display:none; color:#4CAF50; font-weight:bold; font-size: 18px;">✅ IMAGEM DO CASAL CARREGADA!</p>
         <p id="hero-error" style="display:none; color:#f44336; font-weight:bold; font-size: 18px;">❌ ERRO: Imagem do casal não encontrada! Verifique a pasta assets/</p>
     </div>
     
     <div class="test" id="test-css">
         <h2>Teste 4: Arquivo CSS</h2>
-        <p>Caminho: <code>assets/index-BE-s8Z0w.css</code></p>
+        <p>Caminho: <code>./assets/index-BE-s8Z0w.css</code></p>
         <p id="css-result" style="font-size: 16px;">Testando...</p>
     </div>
     
     <div class="test" id="test-js">
         <h2>Teste 5: Arquivo JavaScript</h2>
-        <p>Caminho: <code>assets/index-CL0Mndgf.js</code></p>
+        <p>Caminho: <code>./assets/index-CL0Mndgf.js</code></p>
         <p id="js-result" style="font-size: 16px;">Testando...</p>
     </div>
     
     <div class="checklist">
-        <h2 style="margin-top: 0;">📋 Checklist Completo de Upload</h2>
-        <p><strong>Certifique-se que enviou TODOS estes arquivos:</strong></p>
+        <h2 style="margin-top: 0;">📋 Checklist - Versão Subpasta</h2>
+        <p><strong>Coloque TODOS os arquivos em: <code>public_html/1/</code></strong></p>
         <ul>
-            <li><code>.htaccess</code> (arquivo oculto - IMPORTANTE)</li>
-            <li><code>index.html</code></li>
+            <li><code>.htaccess</code> (IMPORTANTE - já configurado para subpasta)</li>
+            <li><code>index.html</code> (com caminhos relativos)</li>
             <li><code>diagnostico.html</code> (este arquivo)</li>
             <li><code>favicon.png</code></li>
-            <li><code>logo-mix-mateus.png</code> (⭐ NOVO - na raiz!)</li>
-            <li><code>assets/</code> (pasta completa com 3 arquivos):</li>
+            <li><code>logo-mix-mateus.png</code></li>
+            <li><code>assets/</code> (pasta completa com 3 arquivos)</li>
         </ul>
-        <p style="margin-left: 30px; font-size: 14px;">
-            → <code>index-BE-s8Z0w.css</code><br>
-            → <code>index-CL0Mndgf.js</code><br>
-            → <code>Happy_couple_Mix_Mateus_card_approval_770ee240-CNrgi5Vf.png</code>
+        <p style="margin-top: 15px; font-size: 14px; color: #666;">
+            <strong>Estrutura correta:</strong><br>
+            <code>public_html/1/index.html</code><br>
+            <code>public_html/1/logo-mix-mateus.png</code><br>
+            <code>public_html/1/assets/...</code>
         </p>
     </div>
 
     <script>
-        // Testar CSS
-        fetch('assets/index-BE-s8Z0w.css')
+        // Testar CSS (caminho relativo)
+        fetch('./assets/index-BE-s8Z0w.css')
             .then(r => {
                 if (r.ok) {
                     document.getElementById('css-result').innerHTML = '✅ <b style="color:#4CAF50; font-size: 18px;">CSS ENCONTRADO!</b>';
@@ -158,8 +159,8 @@
                 document.getElementById('test-css').classList.add('error');
             });
         
-        // Testar JS
-        fetch('assets/index-CL0Mndgf.js')
+        // Testar JS (caminho relativo)
+        fetch('./assets/index-CL0Mndgf.js')
             .then(r => {
                 if (r.ok) {
                     document.getElementById('js-result').innerHTML = '✅ <b style="color:#4CAF50; font-size: 18px;">JAVASCRIPT ENCONTRADO!</b>';
