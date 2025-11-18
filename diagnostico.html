@@ -14,59 +14,50 @@
     </style>
 </head>
 <body>
-    <h1>🔍 Diagnóstico Mix Mateus - Subpasta</h1>
-    <p style="text-align: center;">Testando arquivos em <code>public_html/1/</code></p>
+    <h1>🔍 Diagnóstico Mix Mateus</h1>
+    <p style="text-align: center;">Testando em <code>public_html/1/</code></p>
     
     <div class="test" id="test-logo">
         <h2>Logo Mix Mateus</h2>
         <img src="./logo-mix-mateus.png" alt="Logo" onerror="this.parentElement.classList.add('error');" onload="this.parentElement.classList.add('success');">
-        <p id="logo-result">✅ Logo OK</p>
+        <p>✅ Logo OK</p>
     </div>
     
     <div class="test" id="test-casal">
-        <h2>Imagem do Casal Feliz</h2>
-        <img src="./casal-feliz.png" alt="Casal" onerror="this.parentElement.classList.add('error'); document.getElementById('casal-result').innerHTML='❌ Imagem não encontrada!';" onload="this.parentElement.classList.add('success'); document.getElementById('casal-result').innerHTML='✅ Casal OK';">
-        <p id="casal-result">Testando...</p>
+        <h2>Imagem do Casal</h2>
+        <img src="./casal-feliz.png" alt="Casal" onerror="this.parentElement.classList.add('error');" onload="this.parentElement.classList.add('success');">
+        <p>✅ Casal OK</p>
     </div>
     
     <div class="test" id="test-css">
-        <h2>Arquivo CSS</h2>
+        <h2>CSS</h2>
         <p id="css-result">Testando...</p>
     </div>
     
     <div class="test" id="test-js">
-        <h2>Arquivo JavaScript</h2>
+        <h2>JavaScript</h2>
         <p id="js-result">Testando...</p>
     </div>
 
     <script>
         fetch('./assets/index-BsyEAtB5.css').then(r => {
-            document.getElementById('css-result').innerHTML = r.ok ? '✅ CSS OK' : '❌ CSS Erro';
+            document.getElementById('css-result').innerHTML = r.ok ? '✅ OK' : '❌ Erro';
             document.getElementById('test-css').classList.add(r.ok ? 'success' : 'error');
         });
         
-        fetch('./assets/index-BM6F57Q2.js').then(r => {
-            document.getElementById('js-result').innerHTML = r.ok ? '✅ JavaScript OK' : '❌ JS Erro';
+        fetch('./assets/index-Ds_90Vr9.js').then(r => {
+            document.getElementById('js-result').innerHTML = r.ok ? '✅ OK' : '❌ Erro';
             document.getElementById('test-js').classList.add(r.ok ? 'success' : 'error');
         });
     </script>
     
-    <div style="margin-top: 30px; padding: 20px; background: #fff3cd; border-radius: 10px;">
-        <h3 style="margin-top: 0;">📋 Checklist:</h3>
-        <p>Todos os arquivos devem estar em: <code>public_html/1/</code></p>
-        <ul>
-            <li>✅ .htaccess</li>
-            <li>✅ index.html</li>
-            <li>✅ diagnostico.html</li>
-            <li>✅ logo-mix-mateus.png</li>
-            <li>✅ casal-feliz.png</li>
-            <li>✅ favicon.png</li>
-            <li>✅ assets/ (pasta com CSS e JS)</li>
-        </ul>
+    <div style="margin-top: 30px; padding: 20px; background: #e3f2fd; border-radius: 10px; border-left: 4px solid #1976d2;">
+        <h3 style="margin-top: 0; color: #1976d2;">📋 URLs do Sistema</h3>
+        <p><strong>Página 1 (HOME):</strong><br><code>https://simuleaqui.online/1/</code></p>
+        <p><strong>Página 2 (FORMULÁRIO):</strong><br><code>https://simuleaqui.online/1/#/2</code></p>
+        <p><strong>Diagnóstico:</strong><br><code>https://simuleaqui.online/1/diagnostico.html</code></p>
         <hr>
-        <p><strong>🔗 Página 1 (HOME):</strong> <code>https://simuleaqui.online/1/</code></p>
-        <p><strong>📝 Página 2 (FORMULÁRIO):</strong> <code>https://simuleaqui.online/1/#/2</code></p>
-        <p><small>Nota: A página 2 usa roteamento frontend, então a URL terá #/2</small></p>
+        <p style="font-size: 14px; color: #666;">✨ Funcionalidades: Página 1 redireciona para ../2, que funciona como #/2 no roteamento frontend</p>
     </div>
 </body>
 </html>
