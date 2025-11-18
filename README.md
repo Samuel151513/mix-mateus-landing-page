@@ -4,94 +4,56 @@
 
 ```
 github-deploy/
+├── .htaccess            (Configuração para Apache)
 ├── css/
-│   ├── style.css    (77 KB - Estilos da aplicação)
-│   └── app.js       (274 KB - JavaScript da aplicação)
+│   ├── style.css       (77 KB - Estilos)
+│   └── app.js          (280 KB - JavaScript)
 ├── fonts/
-│   └── (vazio - fontes carregadas via Google Fonts)
 ├── images/
 │   ├── favicon.png
-│   ├── hero-casal.png         (1.3 MB - Imagem do casal Mix Mateus)
-│   └── logo-mix-mateus.png    (321 KB - Logo Mix Mateus)
-└── index.html
+│   ├── hero-casal.png         (1.3 MB - Casal Mix Mateus)
+│   └── logo-mix-mateus.png    (321 KB - Logo)
+├── index.html
+└── README.md
 ```
 
-## 🚀 Como Fazer Upload no GitHub
+## ✅ VERSÃO CORRIGIDA - v2.0
 
-### Opção 1: Via Interface Web do GitHub
+**O que foi corrigido:**
+- ✅ React Router agora aceita QUALQUER URL e mostra a página inicial
+- ✅ Não dá mais erro 404 em nenhuma rota
+- ✅ Arquivo .htaccess incluído para hospedagens Apache
 
-1. **Crie um novo repositório no GitHub:**
-   - Vá para https://github.com/new
-   - Nome do repositório: `mix-mateus-landing-page` (ou o nome que preferir)
-   - Deixe público ou privado conforme sua preferência
-   - **NÃO** marque "Initialize with README"
-   - Clique em "Create repository"
+## 🚀 Como Fazer Upload
 
-2. **Faça upload dos arquivos:**
-   - Na página do repositório vazio, clique em "uploading an existing file"
-   - Arraste todos os arquivos e pastas da pasta `github-deploy`
-   - Ou clique em "choose your files" e selecione tudo
-   - Escreva uma mensagem de commit (ex: "Initial commit - Landing Page Mix Mateus")
-   - Clique em "Commit changes"
+1. **Baixe o ZIP:**
+   https://github.com/Samuel151513/mix-mateus-landing-page/archive/refs/heads/main.zip
 
-### Opção 2: Via Git CLI (Linha de Comando)
+2. **Extraia todos os arquivos**
 
-Se você tem Git instalado localmente:
+3. **Faça upload de TUDO para sua hospedagem:**
+   - `.htaccess` ⬅️ IMPORTANTE! (arquivo oculto)
+   - `index.html`
+   - `css/` (pasta completa)
+   - `images/` (pasta completa)
+   - `fonts/` (pasta vazia)
 
-```bash
-# Entre na pasta github-deploy
-cd github-deploy
+4. **Acesse seu site** - agora deve funcionar!
 
-# Inicialize o repositório Git
-git init
+## 🔧 Funcionalidades
 
-# Adicione todos os arquivos
-git add .
+- ✅ **Botão "SOLICITAR MEU CARTÃO AGORA"**: Redireciona para https://google.com
+- ✅ **Botão "SOLICITAR AGORA"**: Mostra notificação "Em breve!"
+- ✅ **Funciona em qualquer URL** - não dá mais 404
+- ✅ **Design responsivo** - mobile, tablet, desktop
+- ✅ **Imagem customizada** - casal com cartão Mix Mateus azul
 
-# Faça o primeiro commit
-git commit -m "Initial commit - Landing Page Mix Mateus"
+## 📝 Notas Técnicas
 
-# Conecte ao seu repositório remoto (substitua SEU_USUARIO e SEU_REPO)
-git remote add origin https://github.com/SEU_USUARIO/SEU_REPO.git
-
-# Faça o push
-git branch -M main
-git push -u origin main
-```
-
-## 🌐 Ativar GitHub Pages
-
-Depois de fazer upload:
-
-1. Vá nas **Settings** do repositório
-2. No menu lateral, clique em **Pages**
-3. Em "Source", selecione:
-   - Branch: `main`
-   - Folder: `/ (root)`
-4. Clique em **Save**
-5. Aguarde alguns minutos e seu site estará disponível em:
-   `https://SEU_USUARIO.github.io/SEU_REPO/`
-
-## ✨ Funcionalidades
-
-- **Botão "SOLICITAR MEU CARTÃO AGORA"**: Redireciona para https://google.com
-- **Botão "SOLICITAR AGORA"**: Mostra notificação "Em breve!"
-- **Design responsivo**: Funciona em mobile, tablet e desktop
-- **Imagem customizada**: Casal com cartão Mix Mateus azul
-
-## 📝 Notas
-
-- Total do site: ~2 MB (imagens otimizadas)
-- Compatível com todos os navegadores modernos
-- Sem dependências externas (exceto Google Fonts via CDN)
-- Pronto para SEO com meta tags configuradas
-
-## 🔧 Manutenção
-
-Para atualizar o site:
-1. Edite os arquivos localmente
-2. Faça upload novamente no GitHub
-3. Ou use Git para fazer commit e push das mudanças
+- **Total:** ~2 MB
+- **SEO:** Meta tags configuradas
+- **Performance:** CSS e JS otimizados
+- **Compatibilidade:** Todos os navegadores modernos
 
 ---
 
