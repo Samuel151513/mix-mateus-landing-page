@@ -1,75 +1,140 @@
-# Landing Page Mix Mateus - Cartão de Crédito
+# Mix Mateus Landing Page - Versão de Deploy
 
-## ✅ VERSÃO FINAL COM LOGO CORRETA - v4.0
+## 🎉 SOLUÇÃO FINAL - Logo com Nome Fixo
 
-**Nesta versão:**
-- ✅ **Logo Mix Mateus OFICIAL** (vermelha e azul) implementada
-- ✅ Logo aparece no topo da página
-- ✅ Logo aparece no footer
-- ✅ Imagem do casal funcionando perfeitamente
-- ✅ Todos os elementos visuais carregando corretamente
+Esta versão contém a **CORREÇÃO DEFINITIVA** do problema da logo que não aparecia na hospedagem.
 
-## 📁 Estrutura do Projeto
+### 🔧 O que foi mudado?
 
-```
-github-deploy/
-├── .htaccess                    (Configuração Apache)
-├── index.html                   (Página principal)
-├── favicon.png                  (Ícone do site)
-└── assets/
-    ├── index-BE-s8Z0w.css      (77 KB - Estilos)
-    ├── index-BJZAYh0U.js       (280 KB - JavaScript ATUALIZADO)
-    ├── logo-mix-mateus-DzO9PbdA.png          (Logo OFICIAL Mix Mateus - 321 KB)
-    └── Happy_couple_Mix_Mateus_card_approval_770ee240-CNrgi5Vf.png  (Casal - 1.3 MB)
-```
+**ANTES (Problema):**
+- Logo importada via Vite: gerava nome com hash (`logo-mix-mateus-DzO9PbdA.png`)
+- Problema: Nome mudava a cada build, dificultando upload
 
-## 🚀 Como Fazer Upload - IMPORTANTE
-
-### ⚠️ ATENÇÃO: Delete TUDO antes!
-
-É muito importante deletar TODOS os arquivos antigos da hospedagem antes de fazer o novo upload, especialmente os arquivos JavaScript antigos que podem causar conflito.
-
-### Passo a Passo:
-
-1. **Delete TUDO da hospedagem** (arquivos e pastas antigas)
-
-2. **Baixe a versão ATUALIZADA:**
-   https://github.com/Samuel151513/mix-mateus-landing-page/archive/refs/heads/main.zip
-
-3. **Extraia TODOS os arquivos**
-
-4. **Faça upload de TUDO:**
-   - `.htaccess` ⬅️ IMPORTANTE! (arquivo oculto)
-   - `index.html`
-   - `favicon.png`
-   - `assets/` ⬅️ **PASTA COMPLETA** com TODOS os arquivos dentro
-
-### ✅ Verificação
-
-Após o upload, acesse seu site e verifique:
-- ✅ Logo Mix Mateus (vermelha e azul) aparece no topo
-- ✅ Título "Cartão Mix Mateus Aprovado para Negativados!"
-- ✅ Imagem do casal feliz
-- ✅ Logo Mix Mateus aparece no footer
-- ✅ Todos os botões funcionando
-
-## 🎨 Funcionalidades
-
-- ✅ **Logo Oficial Mix Mateus** - Vermelha e azul
-- ✅ **Imagem do Casal** - Com cartão Mix Mateus
-- ✅ **Botão "SOLICITAR MEU CARTÃO AGORA"** - Redireciona para https://google.com
-- ✅ **Botões Secundários** - Notificação "Em breve!"
-- ✅ **Funciona em QUALQUER URL** - Sem erro 404
-- ✅ **Design Responsivo** - Mobile, tablet, desktop
-
-## 📝 Notas Técnicas
-
-- **Total:** ~2 MB
-- **Logo:** Formato PNG com fundo transparente
-- **Compatibilidade:** Todos os navegadores modernos
-- **SEO:** Meta tags otimizadas
-- **Performance:** Assets otimizados pelo Vite
+**AGORA (Solução):**
+- Logo na pasta `public`: nome **FIXO** sem hash (`logo-mix-mateus.png`)
+- Caminho: `/logo-mix-mateus.png` (sempre o mesmo)
+- Benefício: Upload fácil, nunca precisa atualizar o caminho
 
 ---
 
-**Desenvolvido para Mix Mateus S.A. - 2025**
+## 📦 Arquivos Incluídos
+
+```
+mix-mateus-landing-page/
+├── .htaccess              ← Configuração Apache (IMPORTANTE)
+├── index.html             ← Página principal
+├── diagnostico.html       ← Ferramenta de teste
+├── favicon.png            ← Ícone do site
+├── logo-mix-mateus.png    ← ⭐ Logo com nome fixo
+└── assets/
+    ├── index-BE-s8Z0w.css
+    ├── index-CL0Mndgf.js
+    └── Happy_couple_Mix_Mateus_card_approval_770ee240-CNrgi5Vf.png
+```
+
+---
+
+## 📤 INSTRUÇÕES DE UPLOAD
+
+### Passo 1: Baixar os Arquivos
+Baixe o ZIP: https://github.com/Samuel151513/mix-mateus-landing-page/archive/refs/heads/main.zip
+
+### Passo 2: Extrair
+Extraia TODOS os arquivos do ZIP
+
+### Passo 3: Limpar Hospedagem
+**IMPORTANTE:** Delete TODOS os arquivos antigos da sua hospedagem
+- Entre via FTP ou cPanel
+- Selecione tudo e delete
+- Deixe a pasta completamente vazia
+
+### Passo 4: Upload Completo
+Envie TODOS os arquivos extraídos:
+- ✅ `.htaccess` (arquivo oculto - essencial)
+- ✅ `index.html`
+- ✅ `diagnostico.html`
+- ✅ `favicon.png`
+- ✅ `logo-mix-mateus.png` ← **NOVO!**
+- ✅ Pasta `assets/` completa (3 arquivos dentro)
+
+### Passo 5: Verificar
+Acesse no navegador:
+```
+https://simuleaqui.online/diagnostico.html
+```
+
+Esta página vai mostrar:
+- ✅ **Verde** = Arquivo carregou corretamente
+- ❌ **Vermelho** = Arquivo está faltando
+
+---
+
+## 🔍 Ferramenta de Diagnóstico
+
+A página `diagnostico.html` testa automaticamente:
+
+1. **Logo Mix Mateus** (nome fixo)
+2. **Imagem do casal** (hero section)
+3. **Arquivo CSS** (estilos)
+4. **Arquivo JavaScript** (funcionalidades)
+5. **Checklist completo** de upload
+
+Se algum teste aparecer em **vermelho**, significa que esse arquivo não foi enviado corretamente.
+
+---
+
+## ⚠️ Problemas Comuns
+
+### Logo não aparece?
+**Solução:**
+1. Verifique se enviou o arquivo `logo-mix-mateus.png` na **raiz** (não dentro de pastas)
+2. Certifique-se que o nome está exatamente como: `logo-mix-mateus.png` (sem espaços ou caracteres especiais)
+3. Limpe o cache: `Ctrl + Shift + R` (ou `Cmd + Shift + R` no Mac)
+
+### Site mostra página em branco?
+**Solução:**
+1. Verifique se enviou o arquivo `.htaccess` (arquivo oculto)
+2. Certifique-se que a hospedagem suporta Apache
+3. Entre em contato com o suporte da hospedagem
+
+### Página de erro 404?
+**Solução:**
+1. Verifique se o arquivo `index.html` está na raiz
+2. Verifique se o `.htaccess` foi enviado
+3. Configure o servidor para servir `index.html` como página padrão
+
+---
+
+## 🌐 Links Úteis
+
+- **Repositório GitHub:** https://github.com/Samuel151513/mix-mateus-landing-page
+- **Download ZIP:** https://github.com/Samuel151513/mix-mateus-landing-page/archive/refs/heads/main.zip
+- **Site de Produção:** https://simuleaqui.online
+
+---
+
+## 📞 Suporte
+
+Se tiver problemas:
+1. Acesse `/diagnostico.html` e tire um print
+2. Envie o print mostrando quais testes estão em vermelho
+3. Isso vai ajudar a identificar EXATAMENTE qual arquivo está faltando
+
+---
+
+## ✅ Checklist Final
+
+Antes de publicar, verifique:
+- [ ] Deletei TODOS os arquivos antigos da hospedagem
+- [ ] Enviei o arquivo `.htaccess` (arquivo oculto)
+- [ ] Enviei o arquivo `logo-mix-mateus.png` na raiz
+- [ ] Enviei a pasta `assets/` completa com 3 arquivos
+- [ ] Enviei `index.html`, `diagnostico.html` e `favicon.png`
+- [ ] Acessei `/diagnostico.html` e todos os testes ficaram VERDES ✅
+- [ ] Limpei o cache do navegador (`Ctrl + Shift + R`)
+
+---
+
+**Desenvolvido por:** Replit Agent  
+**Versão:** 3.0 (Logo com Nome Fixo)  
+**Data:** 18 de Novembro de 2025
