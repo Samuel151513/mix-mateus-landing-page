@@ -1,140 +1,75 @@
-# Mix Mateus Landing Page - Versão de Deploy
+# Mix Mateus - Sistema Completo v3.6 ✨
 
-## 🎉 SOLUÇÃO FINAL - Logo com Nome Fixo
+## 🎯 NOVO: Redirecionamento Automático
 
-Esta versão contém a **CORREÇÃO DEFINITIVA** do problema da logo que não aparecia na hospedagem.
+Após enviar o formulário com sucesso:
+1. ✅ Mostra toast de sucesso
+2. ✅ Aguarda 1.5 segundos  
+3. 🎯 Redireciona automaticamente para `../3`
 
-### 🔧 O que foi mudado?
+**Importante:** Prepare a página `/3/` para receber os usuários!
 
-**ANTES (Problema):**
-- Logo importada via Vite: gerava nome com hash (`logo-mix-mateus-DzO9PbdA.png`)
-- Problema: Nome mudava a cada build, dificultando upload
+## ✨ Formatação Automática
 
-**AGORA (Solução):**
-- Logo na pasta `public`: nome **FIXO** sem hash (`logo-mix-mateus.png`)
-- Caminho: `/logo-mix-mateus.png` (sempre o mesmo)
-- Benefício: Upload fácil, nunca precisa atualizar o caminho
+O sistema formata automaticamente enquanto você digita:
 
----
+**CPF:** Digite `12345678900` → Aparece `123.456.789-00`  
+**Data:** Digite `01011990` → Aparece `01/01/1990`  
+**Telefone:** Digite `11987654321` → Aparece `(11) 98765-4321`
 
-## 📦 Arquivos Incluídos
+## 📦 Instalação Rápida
 
+### 1. Download
 ```
-mix-mateus-landing-page/
-├── .htaccess              ← Configuração Apache (IMPORTANTE)
-├── index.html             ← Página principal
-├── diagnostico.html       ← Ferramenta de teste
-├── favicon.png            ← Ícone do site
-├── logo-mix-mateus.png    ← ⭐ Logo com nome fixo
-└── assets/
-    ├── index-BE-s8Z0w.css
-    ├── index-CL0Mndgf.js
-    └── Happy_couple_Mix_Mateus_card_approval_770ee240-CNrgi5Vf.png
+https://github.com/Samuel151513/mix-mateus-landing-page/archive/refs/heads/main.zip
 ```
 
----
+### 2. Upload no Hostinger
+1. Acesse `public_html/1/` no Gerenciador de Arquivos
+2. **DELETE TUDO** dentro da pasta `/1/`
+3. Faça upload de **TODOS OS ARQUIVOS** para dentro de `/1/`
+4. Ajuste permissões: Arquivos 644, Pastas 755
 
-## 📤 INSTRUÇÕES DE UPLOAD
+### 3. Teste
+- Diagnóstico: `https://simuleaqui.online/1/diagnostico.html`
+- Landing page: `https://simuleaqui.online/1/`
+- Formulário: `https://simuleaqui.online/1/#/2`
 
-### Passo 1: Baixar os Arquivos
-Baixe o ZIP: https://github.com/Samuel151513/mix-mateus-landing-page/archive/refs/heads/main.zip
+## 📱 Fluxo Completo
 
-### Passo 2: Extrair
-Extraia TODOS os arquivos do ZIP
-
-### Passo 3: Limpar Hospedagem
-**IMPORTANTE:** Delete TODOS os arquivos antigos da sua hospedagem
-- Entre via FTP ou cPanel
-- Selecione tudo e delete
-- Deixe a pasta completamente vazia
-
-### Passo 4: Upload Completo
-Envie TODOS os arquivos extraídos:
-- ✅ `.htaccess` (arquivo oculto - essencial)
-- ✅ `index.html`
-- ✅ `diagnostico.html`
-- ✅ `favicon.png`
-- ✅ `logo-mix-mateus.png` ← **NOVO!**
-- ✅ Pasta `assets/` completa (3 arquivos dentro)
-
-### Passo 5: Verificar
-Acesse no navegador:
 ```
-https://simuleaqui.online/diagnostico.html
+Página 1 (/)
+    ↓ [Clica "SOLICITAR MEU CARTÃO AGORA"]
+Página 2 (/#/2)
+    ↓ [Preenche formulário + Aceita termos + Envia]
+    ↓ [Toast de sucesso + Aguarda 1.5s]
+Página 3 (../3) ← REDIRECIONA AUTOMATICAMENTE
 ```
 
-Esta página vai mostrar:
-- ✅ **Verde** = Arquivo carregou corretamente
-- ❌ **Vermelho** = Arquivo está faltando
+## ✨ Funcionalidades
 
----
+✅ Landing page profissional  
+✅ Formulário completo (20+ campos)  
+✨ **Formatação automática** (CPF, Data, Telefone)  
+🎯 **Redirecionamento automático** para ../3  
+✅ Validação completa com Zod  
+✅ Aceite de termos obrigatório  
+✅ Toast de sucesso  
+✅ Design responsivo Mix Mateus  
 
-## 🔍 Ferramenta de Diagnóstico
+## 🎨 Cores da Marca
 
-A página `diagnostico.html` testa automaticamente:
-
-1. **Logo Mix Mateus** (nome fixo)
-2. **Imagem do casal** (hero section)
-3. **Arquivo CSS** (estilos)
-4. **Arquivo JavaScript** (funcionalidades)
-5. **Checklist completo** de upload
-
-Se algum teste aparecer em **vermelho**, significa que esse arquivo não foi enviado corretamente.
-
----
-
-## ⚠️ Problemas Comuns
-
-### Logo não aparece?
-**Solução:**
-1. Verifique se enviou o arquivo `logo-mix-mateus.png` na **raiz** (não dentro de pastas)
-2. Certifique-se que o nome está exatamente como: `logo-mix-mateus.png` (sem espaços ou caracteres especiais)
-3. Limpe o cache: `Ctrl + Shift + R` (ou `Cmd + Shift + R` no Mac)
-
-### Site mostra página em branco?
-**Solução:**
-1. Verifique se enviou o arquivo `.htaccess` (arquivo oculto)
-2. Certifique-se que a hospedagem suporta Apache
-3. Entre em contato com o suporte da hospedagem
-
-### Página de erro 404?
-**Solução:**
-1. Verifique se o arquivo `index.html` está na raiz
-2. Verifique se o `.htaccess` foi enviado
-3. Configure o servidor para servir `index.html` como página padrão
-
----
-
-## 🌐 Links Úteis
-
-- **Repositório GitHub:** https://github.com/Samuel151513/mix-mateus-landing-page
-- **Download ZIP:** https://github.com/Samuel151513/mix-mateus-landing-page/archive/refs/heads/main.zip
-- **Site de Produção:** https://simuleaqui.online
-
----
+- **Azul:** `hsl(214 85% 50%)` (primário)
+- **Vermelho:** `hsl(358 85% 55%)` (accent)
 
 ## 📞 Suporte
 
-Se tiver problemas:
-1. Acesse `/diagnostico.html` e tire um print
-2. Envie o print mostrando quais testes estão em vermelho
-3. Isso vai ajudar a identificar EXATAMENTE qual arquivo está faltando
+- **Diagnóstico:** `diagnostico.html` em cada pasta
+- **Console:** F12 no navegador
+- **Docs:** README-FINAL.md (detalhado)
 
 ---
 
-## ✅ Checklist Final
-
-Antes de publicar, verifique:
-- [ ] Deletei TODOS os arquivos antigos da hospedagem
-- [ ] Enviei o arquivo `.htaccess` (arquivo oculto)
-- [ ] Enviei o arquivo `logo-mix-mateus.png` na raiz
-- [ ] Enviei a pasta `assets/` completa com 3 arquivos
-- [ ] Enviei `index.html`, `diagnostico.html` e `favicon.png`
-- [ ] Acessei `/diagnostico.html` e todos os testes ficaram VERDES ✅
-- [ ] Limpei o cache do navegador (`Ctrl + Shift + R`)
-
----
-
-**Desenvolvido por:** Replit Agent  
-**Versão:** 3.0 (Logo com Nome Fixo)  
-**Data:** 18 de Novembro de 2025
+**Versão:** 3.6  
+**Status:** ✅ 100% Operacional  
+**Destaque:** Formatação automática + Redirecionamento para ../3
