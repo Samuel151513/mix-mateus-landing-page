@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnóstico - Mix Mateus</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .test {
+            margin: 20px 0;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+        }
+        .success {
+            border-color: green;
+            background: #e8f5e9;
+        }
+        .error {
+            border-color: red;
+            background: #ffebee;
+        }
+        h1 { color: #1976d2; }
+        h2 { color: #333; }
+        img {
+            max-width: 300px;
+            border: 2px solid #ddd;
+            margin: 10px 0;
+        }
+        code {
+            background: #f5f5f5;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔍 Diagnóstico de Arquivos - Mix Mateus</h1>
+    <p>Esta página verifica se todos os arquivos estão carregando corretamente.</p>
+    
+    <div class="test" id="test-html">
+        <h2>✅ Teste 1: HTML Principal</h2>
+        <p>Se você está vendo esta página, o arquivo <code>diagnostico.html</code> foi enviado corretamente!</p>
+    </div>
+    
+    <div class="test" id="test-logo">
+        <h2>Teste 2: Logo Mix Mateus</h2>
+        <p>Tentando carregar: <code>assets/logo-mix-mateus-DzO9PbdA.png</code></p>
+        <img src="assets/logo-mix-mateus-DzO9PbdA.png" alt="Logo Mix Mateus" onerror="this.parentElement.classList.add('error'); this.style.display='none'; document.getElementById('logo-error').style.display='block';" onload="this.parentElement.classList.add('success'); document.getElementById('logo-success').style.display='block';">
+        <p id="logo-success" style="display:none; color:green; font-weight:bold;">✅ Logo carregada com sucesso!</p>
+        <p id="logo-error" style="display:none; color:red; font-weight:bold;">❌ ERRO: Logo não foi encontrada! Verifique se a pasta assets/ foi enviada corretamente.</p>
+    </div>
+    
+    <div class="test" id="test-hero">
+        <h2>Teste 3: Imagem do Casal</h2>
+        <p>Tentando carregar: <code>assets/Happy_couple_Mix_Mateus_card_approval_770ee240-CNrgi5Vf.png</code></p>
+        <img src="assets/Happy_couple_Mix_Mateus_card_approval_770ee240-CNrgi5Vf.png" alt="Casal Feliz" onerror="this.parentElement.classList.add('error'); this.style.display='none'; document.getElementById('hero-error').style.display='block';" onload="this.parentElement.classList.add('success'); document.getElementById('hero-success').style.display='block';">
+        <p id="hero-success" style="display:none; color:green; font-weight:bold;">✅ Imagem do casal carregada com sucesso!</p>
+        <p id="hero-error" style="display:none; color:red; font-weight:bold;">❌ ERRO: Imagem do casal não foi encontrada!</p>
+    </div>
+    
+    <div class="test" id="test-css">
+        <h2>Teste 4: Arquivo CSS</h2>
+        <p>Verificando: <code>assets/index-BE-s8Z0w.css</code></p>
+        <p id="css-result">Testando...</p>
+    </div>
+    
+    <div class="test" id="test-js">
+        <h2>Teste 5: Arquivo JavaScript</h2>
+        <p>Verificando: <code>assets/index-BJZAYh0U.js</code></p>
+        <p id="js-result">Testando...</p>
+    </div>
+    
+    <div class="test">
+        <h2>📋 Checklist de Upload</h2>
+        <p>Certifique-se que enviou TODOS estes arquivos/pastas:</p>
+        <ul>
+            <li>✅ <code>.htaccess</code> (arquivo oculto)</li>
+            <li>✅ <code>index.html</code></li>
+            <li>✅ <code>diagnostico.html</code> (este arquivo)</li>
+            <li>✅ <code>favicon.png</code></li>
+            <li>✅ <code>assets/</code> (pasta completa com 4 arquivos dentro)</li>
+        </ul>
+    </div>
+
+    <script>
+        // Testar CSS
+        fetch('assets/index-BE-s8Z0w.css')
+            .then(r => {
+                if (r.ok) {
+                    document.getElementById('css-result').innerHTML = '✅ <b style="color:green;">CSS encontrado!</b>';
+                    document.getElementById('test-css').classList.add('success');
+                } else {
+                    document.getElementById('css-result').innerHTML = '❌ <b style="color:red;">CSS NÃO encontrado! Status: ' + r.status + '</b>';
+                    document.getElementById('test-css').classList.add('error');
+                }
+            })
+            .catch(() => {
+                document.getElementById('css-result').innerHTML = '❌ <b style="color:red;">Erro ao buscar CSS!</b>';
+                document.getElementById('test-css').classList.add('error');
+            });
+        
+        // Testar JS
+        fetch('assets/index-BJZAYh0U.js')
+            .then(r => {
+                if (r.ok) {
+                    document.getElementById('js-result').innerHTML = '✅ <b style="color:green;">JavaScript encontrado!</b>';
+                    document.getElementById('test-js').classList.add('success');
+                } else {
+                    document.getElementById('js-result').innerHTML = '❌ <b style="color:red;">JavaScript NÃO encontrado! Status: ' + r.status + '</b>';
+                    document.getElementById('test-js').classList.add('error');
+                }
+            })
+            .catch(() => {
+                document.getElementById('js-result').innerHTML = '❌ <b style="color:red;">Erro ao buscar JavaScript!</b>';
+                document.getElementById('test-js').classList.add('error');
+            });
+    </script>
+</body>
+</html>
