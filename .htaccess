@@ -1,14 +1,15 @@
-# Mix Mateus Landing Page - Configuração Apache
+# Mix Mateus Landing Page - Configuração para SUBPASTA
 
 # Habilitar reescrita de URLs
 <IfModule mod_rewrite.c>
   RewriteEngine On
-  RewriteBase /
+  # IMPORTANTE: RewriteBase deve apontar para a subpasta onde o site está
+  RewriteBase /1/
 
   # Se não for arquivo ou pasta, redireciona para index.html
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule ^(.*)$ /index.html [L]
+  RewriteRule ^(.*)$ index.html [L]
 </IfModule>
 
 # Configurações de segurança e permissões
