@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>✅ Diagnóstico Mix Mateus - Versão Final</title>
+    <title>✅ Diagnóstico Mix Mateus - v3.6</title>
     <style>
         body { font-family: Arial; padding: 20px; max-width: 800px; margin: 0 auto; background: #f5f5f5; }
         h1 { color: #1976d2; text-align: center; }
@@ -15,15 +15,23 @@
     </style>
 </head>
 <body>
-    <h1>🔍 Diagnóstico Mix Mateus - Versão Final</h1>
-    <p style="text-align: center;">Sistema completo com <strong>FORMATAÇÃO AUTOMÁTICA</strong>! <code>public_html/1/</code></p>
+    <h1>🔍 Diagnóstico Mix Mateus - v3.6</h1>
+    <p style="text-align: center;">Sistema completo com <strong>FORMATAÇÃO AUTOMÁTICA + REDIRECIONAMENTO</strong>! <code>public_html/1/</code></p>
     
     <div class="feature">
         <h3 style="margin-top: 0; color: #e65100;">✨ Formatação Automática</h3>
         <p><strong>CPF:</strong> Digite apenas números → Formata para 123.456.789-00</p>
         <p><strong>Data:</strong> Digite apenas números → Formata para 01/01/1990</p>
         <p><strong>Telefone:</strong> Digite apenas números → Formata para (11) 98765-4321</p>
-        <p style="margin-bottom: 0;"><em>A formatação acontece automaticamente enquanto você digita!</em></p>
+    </div>
+
+    <div class="feature" style="background: #e8f5e9; border-left-color: #4caf50;">
+        <h3 style="margin-top: 0; color: #2e7d32;">🎯 NOVO: Redirecionamento Automático</h3>
+        <p><strong>Após enviar o formulário:</strong></p>
+        <p>✅ Mostra toast de sucesso</p>
+        <p>✅ Aguarda 1.5 segundos</p>
+        <p>✅ Redireciona para <code>../3</code> automaticamente</p>
+        <p style="margin-bottom: 0;"><em>Prepare a página /3/ para receber o usuário!</em></p>
     </div>
     
     <div class="test" id="test-logo">
@@ -54,7 +62,7 @@
             document.getElementById('test-css').classList.add(r.ok ? 'success' : 'error');
         });
         
-        fetch('./assets/index-CjJUsg1X.js').then(r => {
+        fetch('./assets/index-DMqRocEr.js').then(r => {
             document.getElementById('js-result').innerHTML = r.ok ? '✅ OK' : '❌ Erro';
             document.getElementById('test-js').classList.add(r.ok ? 'success' : 'error');
         });
@@ -64,16 +72,16 @@
         <h3 style="margin-top: 0; color: #1976d2;">📋 URLs do Sistema</h3>
         <p><strong>Página 1 (HOME):</strong><br><code>https://simuleaqui.online/1/</code></p>
         <p><strong>Página 2 (FORMULÁRIO):</strong><br><code>https://simuleaqui.online/1/#/2</code></p>
+        <p><strong>⭐ Página 3 (DESTINO):</strong><br><code>https://simuleaqui.online/3/</code></p>
         <p><strong>Diagnóstico:</strong><br><code>https://simuleaqui.online/1/diagnostico.html</code></p>
         <hr>
         <p style="font-size: 14px; color: #666;">
-          🎯 <strong>Versão Final - Funcionalidades:</strong><br>
-          • ✨ <strong>Formatação automática</strong> de CPF, Data e Telefone<br>
-          • ✅ Formulário completo com 20+ campos validados<br>
+          🎯 <strong>Versão 3.6 - Funcionalidades:</strong><br>
+          • ✨ Formatação automática de CPF, Data e Telefone<br>
+          • 🎯 Redirecionamento automático para ../3 após envio<br>
+          • ✅ Formulário completo validado<br>
           • ✅ Aceite de termos obrigatório<br>
-          • ✅ Toast de sucesso após envio<br>
-          • ✅ Dados salvos no backend<br>
-          • ✅ Design responsivo Mix Mateus (azul + vermelho)
+          • ✅ Toast de sucesso antes do redirecionamento
         </p>
     </div>
 </body>
