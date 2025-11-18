@@ -40,12 +40,12 @@
     </div>
 
     <script>
-        fetch('./assets/index-BE-s8Z0w.css').then(r => {
+        fetch('./assets/index-BsyEAtB5.css').then(r => {
             document.getElementById('css-result').innerHTML = r.ok ? '✅ CSS OK' : '❌ CSS Erro';
             document.getElementById('test-css').classList.add(r.ok ? 'success' : 'error');
         });
         
-        fetch('./assets/index-Coc9upCV.js').then(r => {
+        fetch('./assets/index-BM6F57Q2.js').then(r => {
             document.getElementById('js-result').innerHTML = r.ok ? '✅ JavaScript OK' : '❌ JS Erro';
             document.getElementById('test-js').classList.add(r.ok ? 'success' : 'error');
         });
@@ -64,7 +64,9 @@
             <li>✅ assets/ (pasta com CSS e JS)</li>
         </ul>
         <hr>
-        <p><strong>🔗 Redirecionamento configurado:</strong> Botão principal agora redireciona para <code>../2</code></p>
+        <p><strong>🔗 Página 1 (HOME):</strong> <code>https://simuleaqui.online/1/</code></p>
+        <p><strong>📝 Página 2 (FORMULÁRIO):</strong> <code>https://simuleaqui.online/1/#/2</code></p>
+        <p><small>Nota: A página 2 usa roteamento frontend, então a URL terá #/2</small></p>
     </div>
 </body>
 </html>
