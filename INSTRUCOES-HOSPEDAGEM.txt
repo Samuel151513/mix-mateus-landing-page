@@ -1,0 +1,129 @@
+═══════════════════════════════════════════════════════════════════
+  MIX MATEUS - INSTRUÇÕES PARA CORRIGIR ERRO 403 FORBIDDEN
+═══════════════════════════════════════════════════════════════════
+
+PROBLEMA IDENTIFICADO:
+✖ Página principal: 403 Forbidden
+✖ Arquivos CSS/JS: 404 Not Found
+✖ Causa: Permissões incorretas ou configuração do servidor
+
+═══════════════════════════════════════════════════════════════════
+
+SOLUÇÃO 1: CORRIGIR PERMISSÕES VIA FTP/cPanel
+═══════════════════════════════════════════════════════════════════
+
+1. Entre no FTP ou Gerenciador de Arquivos do cPanel
+
+2. PERMISSÕES DOS ARQUIVOS (clique direito > Permissões):
+
+   Arquivos HTML/TXT/HTACCESS:
+   ✓ .htaccess          → 644
+   ✓ index.html         → 644
+   ✓ diagnostico.html   → 644
+   ✓ favicon.png        → 644
+   ✓ logo-mix-mateus.png → 644
+
+   Pasta assets:
+   ✓ assets/ (pasta)    → 755
+   ✓ Todos os arquivos dentro → 644
+
+3. CHMOD em números:
+   - Arquivos: 644 (rw-r--r--)
+   - Pastas: 755 (rwxr-xr-x)
+
+═══════════════════════════════════════════════════════════════════
+
+SOLUÇÃO 2: CORRIGIR VIA LINHA DE COMANDO (SSH)
+═══════════════════════════════════════════════════════════════════
+
+Se tiver acesso SSH, rode estes comandos:
+
+cd public_html  # ou o diretório onde estão os arquivos
+
+# Ajustar permissões das pastas
+find . -type d -exec chmod 755 {} \;
+
+# Ajustar permissões dos arquivos
+find . -type f -exec chmod 644 {} \;
+
+# Verificar se deu certo
+ls -la
+
+═══════════════════════════════════════════════════════════════════
+
+SOLUÇÃO 3: ARQUIVO .htaccess ATUALIZADO
+═══════════════════════════════════════════════════════════════════
+
+O novo arquivo .htaccess já inclui:
+✓ Permissões explícitas para arquivos
+✓ Configuração correta do mod_rewrite
+✓ Suporte a LiteSpeed (servidor da Hostinger)
+
+Certifique-se de:
+1. Enviar o .htaccess atualizado (sobrescreva o antigo)
+2. Verificar se o arquivo foi enviado como ".htaccess" (com ponto)
+3. Permissão do .htaccess: 644
+
+═══════════════════════════════════════════════════════════════════
+
+CHECKLIST PÓS-UPLOAD:
+═══════════════════════════════════════════════════════════════════
+
+□ 1. Todos os arquivos enviados?
+     - .htaccess
+     - index.html
+     - diagnostico.html
+     - favicon.png
+     - logo-mix-mateus.png
+     - assets/ (pasta com 3 arquivos)
+
+□ 2. Permissões corretas?
+     - Pastas: 755
+     - Arquivos: 644
+
+□ 3. Testou /diagnostico.html?
+     - Deve mostrar TUDO verde
+
+□ 4. Limpou o cache do navegador?
+     - Ctrl + Shift + R (Windows)
+     - Cmd + Shift + R (Mac)
+
+═══════════════════════════════════════════════════════════════════
+
+TESTE FINAL:
+═══════════════════════════════════════════════════════════════════
+
+Acesse estas URLs e verifique:
+
+✓ https://simuleaqui.online/
+  → Deve mostrar a página do cartão Mix Mateus
+
+✓ https://simuleaqui.online/diagnostico.html
+  → Todos os testes devem ficar VERDES
+
+✓ https://simuleaqui.online/assets/index-BE-s8Z0w.css
+  → Deve baixar o arquivo CSS
+
+✓ https://simuleaqui.online/assets/index-CL0Mndgf.js
+  → Deve baixar o arquivo JavaScript
+
+═══════════════════════════════════════════════════════════════════
+
+AINDA NÃO FUNCIONOU?
+═══════════════════════════════════════════════════════════════════
+
+Entre em contato com o SUPORTE DA HOSTINGER e informe:
+
+"Meu site está dando erro 403 Forbidden. Já verifiquei as 
+permissões (644 para arquivos, 755 para pastas) e o arquivo 
+.htaccess está correto. Preciso que habilitem o mod_rewrite 
+e verifiquem se há algum bloqueio no servidor."
+
+Telefone Hostinger Brasil: 0800 006 5025
+Chat: https://www.hostinger.com.br/contato
+
+═══════════════════════════════════════════════════════════════════
+
+Desenvolvido por: Replit Agent
+Versão: 3.1 (Correção de Permissões)
+Data: 18 de Novembro de 2025
