@@ -7,6 +7,6 @@ RewriteRule ^(.*)$ index.html [L]
 Options -Indexes
 Options +FollowSymLinks
 
-<FilesMatch "\.(html|css|js|png|jpg|jpeg|gif|ico|svg)$">
+<FilesMatch "\.(html|css|js|png|jpg|jpeg|gif|ico)$">
   Require all granted
 </FilesMatch>
