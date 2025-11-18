@@ -2,178 +2,51 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>✅ Diagnóstico - Mix Mateus (SUBPASTA)</title>
+    <title>Diagnóstico Mix Mateus</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            padding: 20px;
-            max-width: 900px;
-            margin: 0 auto;
-            background: #f5f5f5;
-        }
-        h1 {
-            color: #1976d2;
-            text-align: center;
-            font-size: 28px;
-        }
-        .success-banner {
-            background: linear-gradient(135deg, #4CAF50, #45a049);
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            margin: 20px 0;
-            font-size: 20px;
-            font-weight: bold;
-        }
-        .test {
-            margin: 20px 0;
-            padding: 20px;
-            border: 3px solid #ddd;
-            border-radius: 10px;
-            background: white;
-        }
-        .success {
-            border-color: #4CAF50;
-            background: #e8f5e9;
-        }
-        .error {
-            border-color: #f44336;
-            background: #ffebee;
-        }
-        h2 { 
-            color: #333;
-            margin-top: 0;
-        }
-        img {
-            max-width: 400px;
-            border: 2px solid #ddd;
-            margin: 15px 0;
-            border-radius: 8px;
-        }
-        code {
-            background: #f5f5f5;
-            padding: 3px 8px;
-            border-radius: 4px;
-            color: #d32f2f;
-            font-weight: bold;
-        }
-        .checklist {
-            background: #fff3cd;
-            border: 2px solid #ffc107;
-            padding: 20px;
-            border-radius: 10px;
-        }
-        .checklist ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        .checklist li {
-            padding: 8px 0;
-            font-size: 16px;
-        }
-        .checklist li:before {
-            content: "✅ ";
-            color: #4CAF50;
-            font-size: 20px;
-            margin-right: 10px;
-        }
+        body { font-family: Arial; padding: 20px; max-width: 800px; margin: 0 auto; }
+        .test { margin: 20px 0; padding: 15px; border: 2px solid #ddd; border-radius: 8px; }
+        .success { border-color: green; background: #e8f5e9; }
+        .error { border-color: red; background: #ffebee; }
+        img { max-width: 300px; margin: 10px 0; }
     </style>
 </head>
 <body>
-    <div class="success-banner">
-        🎉 VERSÃO PARA SUBPASTA - Caminhos Relativos! 🎉
-    </div>
-
-    <h1>🔍 Diagnóstico Completo - Mix Mateus (Subpasta)</h1>
-    <p style="text-align: center; font-size: 16px;">Esta versão funciona em <code>public_html/1/</code> ou qualquer outra subpasta!</p>
-    
-    <div class="test" id="test-html">
-        <h2>✅ Teste 1: HTML Principal</h2>
-        <p>Se você está vendo esta página, o arquivo <code>diagnostico.html</code> foi enviado corretamente!</p>
-    </div>
+    <h1>Diagnóstico Mix Mateus</h1>
     
     <div class="test" id="test-logo">
-        <h2>Teste 2: Logo Mix Mateus (CAMINHO RELATIVO)</h2>
-        <p><strong>NOVIDADE:</strong> Usando caminhos relativos (funciona em subpastas)!</p>
-        <p>Caminho: <code>./logo-mix-mateus.png</code></p>
-        <img src="./logo-mix-mateus.png" alt="Logo Mix Mateus" onerror="this.parentElement.classList.add('error'); this.style.display='none'; document.getElementById('logo-error').style.display='block';" onload="this.parentElement.classList.add('success'); document.getElementById('logo-success').style.display='block';">
-        <p id="logo-success" style="display:none; color:#4CAF50; font-weight:bold; font-size: 18px;">✅ LOGO CARREGADA COM SUCESSO!</p>
-        <p id="logo-error" style="display:none; color:#f44336; font-weight:bold; font-size: 18px;">❌ ERRO: Logo não encontrada! Certifique-se de enviar logo-mix-mateus.png na mesma pasta.</p>
+        <h2>Logo Mix Mateus</h2>
+        <img src="./logo-mix-mateus.png" alt="Logo" onerror="this.parentElement.classList.add('error'); this.style.display='none';" onload="this.parentElement.classList.add('success');">
+        <p id="logo-result">Testando...</p>
     </div>
     
     <div class="test" id="test-hero">
-        <h2>Teste 3: Imagem do Casal</h2>
-        <p>Caminho: <code>./assets/Happy_couple_Mix_Mateus_card_approval_770ee240-CNrgi5Vf.png</code></p>
-        <img src="./assets/Happy_couple_Mix_Mateus_card_approval_770ee240-CNrgi5Vf.png" alt="Casal Feliz" onerror="this.parentElement.classList.add('error'); this.style.display='none'; document.getElementById('hero-error').style.display='block';" onload="this.parentElement.classList.add('success'); document.getElementById('hero-success').style.display='block';">
-        <p id="hero-success" style="display:none; color:#4CAF50; font-weight:bold; font-size: 18px;">✅ IMAGEM DO CASAL CARREGADA!</p>
-        <p id="hero-error" style="display:none; color:#f44336; font-weight:bold; font-size: 18px;">❌ ERRO: Imagem do casal não encontrada! Verifique a pasta assets/</p>
+        <h2>Imagem do Casal</h2>
+        <img src="./assets/Happy_couple_Mix_Mateus_card_approval_770ee240-CNrgi5Vf.png" alt="Casal" onerror="this.parentElement.classList.add('error'); this.style.display='none';" onload="this.parentElement.classList.add('success');">
     </div>
     
     <div class="test" id="test-css">
-        <h2>Teste 4: Arquivo CSS</h2>
-        <p>Caminho: <code>./assets/index-BE-s8Z0w.css</code></p>
-        <p id="css-result" style="font-size: 16px;">Testando...</p>
+        <h2>CSS</h2>
+        <p id="css-result">Testando...</p>
     </div>
     
     <div class="test" id="test-js">
-        <h2>Teste 5: Arquivo JavaScript</h2>
-        <p>Caminho: <code>./assets/index-CL0Mndgf.js</code></p>
-        <p id="js-result" style="font-size: 16px;">Testando...</p>
-    </div>
-    
-    <div class="checklist">
-        <h2 style="margin-top: 0;">📋 Checklist - Versão Subpasta</h2>
-        <p><strong>Coloque TODOS os arquivos em: <code>public_html/1/</code></strong></p>
-        <ul>
-            <li><code>.htaccess</code> (IMPORTANTE - já configurado para subpasta)</li>
-            <li><code>index.html</code> (com caminhos relativos)</li>
-            <li><code>diagnostico.html</code> (este arquivo)</li>
-            <li><code>favicon.png</code></li>
-            <li><code>logo-mix-mateus.png</code></li>
-            <li><code>assets/</code> (pasta completa com 3 arquivos)</li>
-        </ul>
-        <p style="margin-top: 15px; font-size: 14px; color: #666;">
-            <strong>Estrutura correta:</strong><br>
-            <code>public_html/1/index.html</code><br>
-            <code>public_html/1/logo-mix-mateus.png</code><br>
-            <code>public_html/1/assets/...</code>
-        </p>
+        <h2>JavaScript</h2>
+        <p id="js-result">Testando...</p>
     </div>
 
     <script>
-        // Testar CSS (caminho relativo)
-        fetch('./assets/index-BE-s8Z0w.css')
-            .then(r => {
-                if (r.ok) {
-                    document.getElementById('css-result').innerHTML = '✅ <b style="color:#4CAF50; font-size: 18px;">CSS ENCONTRADO!</b>';
-                    document.getElementById('test-css').classList.add('success');
-                } else {
-                    document.getElementById('css-result').innerHTML = '❌ <b style="color:#f44336;">CSS NÃO ENCONTRADO! Status: ' + r.status + '</b>';
-                    document.getElementById('test-css').classList.add('error');
-                }
-            })
-            .catch(() => {
-                document.getElementById('css-result').innerHTML = '❌ <b style="color:#f44336;">Erro ao buscar CSS!</b>';
-                document.getElementById('test-css').classList.add('error');
-            });
+        fetch('./assets/index-BE-s8Z0w.css').then(r => {
+            document.getElementById('css-result').innerHTML = r.ok ? '✅ OK' : '❌ Erro';
+            document.getElementById('test-css').classList.add(r.ok ? 'success' : 'error');
+        });
         
-        // Testar JS (caminho relativo)
-        fetch('./assets/index-CL0Mndgf.js')
-            .then(r => {
-                if (r.ok) {
-                    document.getElementById('js-result').innerHTML = '✅ <b style="color:#4CAF50; font-size: 18px;">JAVASCRIPT ENCONTRADO!</b>';
-                    document.getElementById('test-js').classList.add('success');
-                } else {
-                    document.getElementById('js-result').innerHTML = '❌ <b style="color:#f44336;">JAVASCRIPT NÃO ENCONTRADO! Status: ' + r.status + '</b>';
-                    document.getElementById('test-js').classList.add('error');
-                }
-            })
-            .catch(() => {
-                document.getElementById('js-result').innerHTML = '❌ <b style="color:#f44336;">Erro ao buscar JavaScript!</b>';
-                document.getElementById('test-js').classList.add('error');
-            });
+        fetch('./assets/index-l7Kil_VN.js').then(r => {
+            document.getElementById('js-result').innerHTML = r.ok ? '✅ OK' : '❌ Erro';
+            document.getElementById('test-js').classList.add(r.ok ? 'success' : 'error');
+        });
+        
+        document.getElementById('logo-result').innerHTML = '✅ Logo carregada!';
     </script>
 </body>
 </html>
