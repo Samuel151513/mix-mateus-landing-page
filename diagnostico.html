@@ -2,51 +2,67 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Diagnóstico Mix Mateus</title>
+    <title>✅ Diagnóstico Mix Mateus</title>
     <style>
-        body { font-family: Arial; padding: 20px; max-width: 800px; margin: 0 auto; }
-        .test { margin: 20px 0; padding: 15px; border: 2px solid #ddd; border-radius: 8px; }
-        .success { border-color: green; background: #e8f5e9; }
-        .error { border-color: red; background: #ffebee; }
-        img { max-width: 300px; margin: 10px 0; }
+        body { font-family: Arial; padding: 20px; max-width: 800px; margin: 0 auto; background: #f5f5f5; }
+        h1 { color: #1976d2; text-align: center; }
+        .test { margin: 20px 0; padding: 20px; border: 3px solid #ddd; border-radius: 10px; background: white; }
+        .success { border-color: #4CAF50; background: #e8f5e9; }
+        .error { border-color: #f44336; background: #ffebee; }
+        img { max-width: 400px; border: 2px solid #ddd; margin: 15px 0; border-radius: 8px; }
+        code { background: #f5f5f5; padding: 3px 8px; border-radius: 4px; color: #d32f2f; font-weight: bold; }
     </style>
 </head>
 <body>
-    <h1>Diagnóstico Mix Mateus</h1>
+    <h1>🔍 Diagnóstico Mix Mateus - Subpasta</h1>
+    <p style="text-align: center;">Testando arquivos em <code>public_html/1/</code></p>
     
     <div class="test" id="test-logo">
         <h2>Logo Mix Mateus</h2>
-        <img src="./logo-mix-mateus.png" alt="Logo" onerror="this.parentElement.classList.add('error'); this.style.display='none';" onload="this.parentElement.classList.add('success');">
-        <p id="logo-result">Testando...</p>
+        <img src="./logo-mix-mateus.png" alt="Logo" onerror="this.parentElement.classList.add('error');" onload="this.parentElement.classList.add('success');">
+        <p id="logo-result">✅ Logo OK</p>
     </div>
     
-    <div class="test" id="test-hero">
-        <h2>Imagem do Casal</h2>
-        <img src="./assets/Happy_couple_Mix_Mateus_card_approval_770ee240-CNrgi5Vf.png" alt="Casal" onerror="this.parentElement.classList.add('error'); this.style.display='none';" onload="this.parentElement.classList.add('success');">
+    <div class="test" id="test-casal">
+        <h2>Imagem do Casal Feliz</h2>
+        <img src="./casal-feliz.png" alt="Casal" onerror="this.parentElement.classList.add('error'); document.getElementById('casal-result').innerHTML='❌ Imagem não encontrada!';" onload="this.parentElement.classList.add('success'); document.getElementById('casal-result').innerHTML='✅ Casal OK';">
+        <p id="casal-result">Testando...</p>
     </div>
     
     <div class="test" id="test-css">
-        <h2>CSS</h2>
+        <h2>Arquivo CSS</h2>
         <p id="css-result">Testando...</p>
     </div>
     
     <div class="test" id="test-js">
-        <h2>JavaScript</h2>
+        <h2>Arquivo JavaScript</h2>
         <p id="js-result">Testando...</p>
     </div>
 
     <script>
         fetch('./assets/index-BE-s8Z0w.css').then(r => {
-            document.getElementById('css-result').innerHTML = r.ok ? '✅ OK' : '❌ Erro';
+            document.getElementById('css-result').innerHTML = r.ok ? '✅ CSS OK' : '❌ CSS Erro';
             document.getElementById('test-css').classList.add(r.ok ? 'success' : 'error');
         });
         
-        fetch('./assets/index-l7Kil_VN.js').then(r => {
-            document.getElementById('js-result').innerHTML = r.ok ? '✅ OK' : '❌ Erro';
+        fetch('./assets/index-DEoCAmON.js').then(r => {
+            document.getElementById('js-result').innerHTML = r.ok ? '✅ JavaScript OK' : '❌ JS Erro';
             document.getElementById('test-js').classList.add(r.ok ? 'success' : 'error');
         });
-        
-        document.getElementById('logo-result').innerHTML = '✅ Logo carregada!';
     </script>
+    
+    <div style="margin-top: 30px; padding: 20px; background: #fff3cd; border-radius: 10px;">
+        <h3 style="margin-top: 0;">📋 Checklist:</h3>
+        <p>Todos os arquivos devem estar em: <code>public_html/1/</code></p>
+        <ul>
+            <li>✅ .htaccess</li>
+            <li>✅ index.html</li>
+            <li>✅ diagnostico.html</li>
+            <li>✅ logo-mix-mateus.png</li>
+            <li>✅ casal-feliz.png</li>
+            <li>✅ favicon.png</li>
+            <li>✅ assets/ (pasta com CSS e JS)</li>
+        </ul>
+    </div>
 </body>
 </html>
