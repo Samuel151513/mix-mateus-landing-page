@@ -14,8 +14,8 @@
     </style>
 </head>
 <body>
-    <h1>🔍 Diagnóstico Mix Mateus</h1>
-    <p style="text-align: center;">Testando em <code>public_html/1/</code></p>
+    <h1>🔍 Diagnóstico Mix Mateus - Versão 3.4</h1>
+    <p style="text-align: center;">Sistema completo com formulário funcionando! <code>public_html/1/</code></p>
     
     <div class="test" id="test-logo">
         <h2>Logo Mix Mateus</h2>
@@ -45,7 +45,7 @@
             document.getElementById('test-css').classList.add(r.ok ? 'success' : 'error');
         });
         
-        fetch('./assets/index-Ds_90Vr9.js').then(r => {
+        fetch('./assets/index-Be42FRMp.js').then(r => {
             document.getElementById('js-result').innerHTML = r.ok ? '✅ OK' : '❌ Erro';
             document.getElementById('test-js').classList.add(r.ok ? 'success' : 'error');
         });
@@ -57,7 +57,14 @@
         <p><strong>Página 2 (FORMULÁRIO):</strong><br><code>https://simuleaqui.online/1/#/2</code></p>
         <p><strong>Diagnóstico:</strong><br><code>https://simuleaqui.online/1/diagnostico.html</code></p>
         <hr>
-        <p style="font-size: 14px; color: #666;">✨ Funcionalidades: Página 1 redireciona para ../2, que funciona como #/2 no roteamento frontend</p>
+        <p style="font-size: 14px; color: #666;">
+          ✨ <strong>Versão 3.4 - Funcionalidades:</strong><br>
+          • Página 1 redireciona para ../2 (formulário completo)<br>
+          • Formulário validado com 20+ campos<br>
+          • Validação de aceite de termos obrigatório<br>
+          • Toast de sucesso após envio<br>
+          • Dados salvos no backend
+        </p>
     </div>
 </body>
 </html>
